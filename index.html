@@ -1,17 +1,376 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
-</head>
+<title>Alvin Alaphat</title>
 
-<body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="./static/images/alvinlogo.jpg" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+.fa-github {
+    color:purple;
+}
+.fa-facebook-official {
+   color:#3b5998;
+}
+
+.fa-instagram {
+    color:#e23578;
+}
+
+.fa-twitter {
+    color:#00aced;
+}
+
+.fa-soundcloud {
+    color:orange;
+}
+
+.fa-spotify {
+    color:green;
+}
+
+.fa-linkedin {
+    color: #0f64c5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Oswald"
+}
+
+body {
+    font-family: "Open Sans"
+}
+
+</style>
+
+<body class="w3-light-grey">
+
+<!-- Navigation bar with social media icons -->
+<!-- <div class="w3-bar w3-blue w3-hide-small">
+  <a href="https://www.github.com/alvinalaphat/" class="w3-bar-item w3-button"><i class="fa fa-github"></i></a>
+  <a href="https://www.facebook.com/alvin.alaphat/" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://www.instagram.com/alvin.alaphat/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+  <a href="https://twitter.com/alvinalpha02" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.linkedin.com/in/alvin-a-6b38b0159/" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <a href="https://soundcloud.com/alvin-alaphat-884121419" class="w3-bar-item w3-button"><i class="fa fa-soundcloud"></i></a>
+  <!-- <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a> -->
+<!-- </div> -->
+
+<div class="w3-content" style="max-width:1600px">
+
+  <!-- Header
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>Alvin Alaphat</b></h1>
+    <h6>Welcome to my world</h6>
+  </header> -->
+
+  <!-- Image header --> 
+  <header class="w3-display-container w3-wide" id="home">
+      <div style="width:fit-content height:fit-content" >
+        <img class="w3-image mySlides w3-animate-right" src="./static/images/friends.JPG" alt="friends" >
+        <img class="w3-image mySlides w3-animate-right" src="./static/images/fam.jpg" alt="fam" >
+        <img class="w3-image mySlides w3-animate-right" src="./static/images/stlouis.JPG" alt="stl" >
+        <img class="w3-image mySlides w3-animate-right" src="./static/images/traveler.jpg" alt="traveler">
+        <img class="w3-image mySlides w3-animate-right" src="./static/images/giver.JPG" alt="christian">
+        <img class="w3-image mySlides w3-animate-right" src="./static/images/tedx.jpg" alt="tedx" >
+        <img class="w3-image mySlides w3-animate-right" src="./static/images/soccer.JPG" alt="soccer">
+        <img class="w3-image mySlides w3-animate-right" src="./static/images/manforothers.jpg" alt="manforothers">
+    </div>
+    <div class="w3-display-left w3-padding-large">
+      <br><br><br><br>
+      <h1 class="w3-text-white">Alvin Alaphat</h1>
+      <h1 class="w3-jumbo myTextSlide w3-animate-right w3-text-white w3-hide-small"><b>Friends</b></h1>
+      <h1 class="w3-jumbo myTextSlide w3-animate-right w3-text-white w3-hide-small"><b>Family</b></h1>
+      <h1 class="w3-jumbo myTextSlide w3-animate-right w3-text-white w3-hide-small"><b>St. Louis</b></h1>
+      <h1 class="w3-jumbo myTextSlide w3-animate-right w3-text-white w3-hide-small"><b>Eagle Scout</b></h1>
+      <h1 class="w3-jumbo myTextSlide w3-animate-right w3-text-white w3-hide-small"><b>Christian</b></h1>
+      <h1 class="w3-jumbo myTextSlide w3-animate-right w3-text-white w3-hide-small"><b>Tedx Speaker</b></h1>
+      <h1 class="w3-jumbo myTextSlide w3-animate-right w3-text-white w3-hide-small"><b>Soccer Player</b></h1>
+      <h1 class="w3-jumbo myTextSlide w3-animate-right w3-text-white w3-hide-small"><b>Man for Others</b></h1>
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">Join My Network</button></h6>
+    </div>
+  </header>
+
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
+
+    <!-- project entries -->
+    <div class="w3-col l8 s12">
+    <h1 class="w3-xxxlarge w3-center">SIDE PROJECTS</h1>
+      <!-- project entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Innovation Network</h3>
+          <h5><span class="w3-opacity">January 2017</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="./static/images/inetwork.png" alt="inetwork" style="width:100%" class="w3-padding-16">
+          <p>I created a web app that allows students and teachers alike to share their skills across a single network. They simply signup making note of what skills they have and with the click of a simple search, they can find other users that have 
+            a skill they're looking for or want to become trained in. There's also a chat for people to set up meetings and a calendar for users to make reservations on a classroom
+            in the school for their sessions. Finished projects are highlighted in the projects page for others to view. The purpose behind this app was to use software as a means to promote face-to-face interactions. By making use of this
+            powerful tool, communities can strengthen each other by building each other's skillsets and creating a more capable, likeminded world. </p>
+          <p class="w3-right"><button class="w3-button w3-black w3-border"onclick="location.href='http://i-net.herokuapp.com/'" type=button>Check it out</button></p>
+          <p class="w3-clear"></p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- project entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>ScuttleButt</h3>
+          <h5><span class="w3-opacity">December 2019</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="./static/images/scuttlebutt.png" alt="scuttlebutt" style="width:100%" class="w3-padding-16">
+          <p>I love soccer and something I thought would be great as I got introduced into web scraping was to build an app that would solve a problem many of us soccer fans have.
+              Often times, many different sites might have mixed opinions about possible transfers going on in the professional soccer world. There's also no easy way to search up a specific
+              player or team to find all related transfer rumors. By being able to search any player or team, users can find all the information they need concerning transfer rumors from 
+              multiple reputable sites so they can compare the validity of the information they're seeking. All search results link the users directly back to the original article for further reading.
+              It's a fun tool to play with and I recommend checking it out!
+          </p>
+          <p class="w3-right"><button class="w3-button w3-black w3-border"onclick="location.href='http://scuttle-butt.herokuapp.com/'" type=button>Check it out</button></p>
+          <p class="w3-clear"></p>
+        </div>
+      </div>
+
+      <!-- project entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+
+        <div class="w3-center">
+          <h3>Summarize This</h3>
+          <h5><span class="w3-opacity">September 2019</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="./static/images/summarizer.png" alt="summarizer" style="width:100%" class="w3-padding-16">
+          <p>I needed a practical way to be able to consume large amounts of reading each night for my classes. Deciding to use the power of natural language processing, I developed a simple app that would make
+              my time efficiency skyrocket by summarizing all the content of a text down to 15-20% of its original content, leaving only the main ideas of what I needed to know about the reading. I even shared this tool
+              with my friends so that they could spend less late nights reading large philosophy texts and more time understanding the general idea of what they were intending to learn about. 
+          </p>
+          <p class="w3-right"><button class="w3-button w3-black w3-border"onclick="location.href='http://summarizethis.herokuapp.com/'" type=button>Check it out</button></p>
+          <p class="w3-clear"></p>
+        </div>
+
+      </div>
+
+      <!-- project entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+
+        <div class="w3-center">
+          <h3>Economeme</h3>
+          <h5><span class="w3-opacity">May 2020</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="./static/images/economeme.png" alt="economeme" style="width:100%" class="w3-padding-16">
+          <p>Now this is crazy but hear me out. Imagine investing in a meme before it becomes viral and making money if the bet you made on it pans out. 
+              The first ever Meme Based Stock Market is here. Users receive daily stipends of 50 (virtual) coins to help in case they go bankrupt but using Twitter's API to track
+              the virality of a meme, people can bet on how viral a tweet becomes within a defined time period. Kind of like call options in the real world. Say I bet 750 coins that 
+              the meme #okboomer goes up by 7% within the next two days. The algorithm calculates the riskiness of that bet based on the given parameters and uses that to determine what
+              the payout will be. Friends can compete with each other to gain the most amount of money to rise up to the top of the leaderboards!
+          </p>
+          <p class="w3-right"><button class="w3-button w3-black w3-border" type=button>Check it out</button></p>
+          <p class="w3-clear"></p>
+        </div>
+
+      </div>
+      
+    <!-- END ENTRIES -->
+    </div>
+
+    <!-- About/Information menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-white w3-margin">
+        <img src="./static/images/profile.png" alt="Alvin" style="width:100%">
+        <div class="w3-container w3-indigo">
+          <h4>Alvin Alaphat</h4>
+          <p>"I believe that technology is a limitless avenue that has evolved my passion for discovering and supporting new breakthroughs. Investing in the tech industry allows me to be flexible and breathe life into the diverse ideas formed in my imagination to 
+            change the way we live, serve, and inspire our generation. AI is about to be the next revolutionary wave in technology and I want to be ready when it hits."
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Resume -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-indigo">
+          <h4>Resume</h4>
+        </div>
+        <div class="w3-row-padding w3-white"><br>
+          <a href="./static/images/Resume.pdf" download><i class="fa fa-file-text-o" aria-hidden="true"> <strong>View My Resume</strong></i></a>
+          <br><br>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Social Media -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-indigo">
+          <h4>Follow Me</h4>
+        </div>
+        <div class="w3-container w3-large w3-padding w3-center">
+            <i></i>
+            <a href="https://www.github.com/alvinalaphat/" class="w3-bar-item w3-button"><i class="fa fa-github"></i></a>
+            <a href="https://www.facebook.com/alvin.alaphat/" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+            <a href="https://www.instagram.com/alvin.alaphat/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/alvinalpha02" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/alvin-a-6b38b0159/" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+            <a href="https://open.spotify.com/user/22zgjfwjceajyeq7h66b4ytfq?si=1N8HsuGyRtmbzoWwrSkECw" class="w3-bar-item w3-button"><i class="fa fa-spotify"></i></a>
+            <!-- <a href="https://soundcloud.com/alvin-alaphat-884121419" class="w3-bar-item w3-button"><i class="fa fa-soundcloud"></i></a> -->
+        </div>
+      </div>
+      <hr>
+
+      <!-- Interests -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-indigo">
+          <h4>Interests</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <!-- <img src="/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px"> -->
+            <span class="w3-large">Artificial Intelligence</span>
+            <br>
+            <!-- <span>Artificial Intelligence</span> -->
+          </li>
+          <li class="w3-padding-16">
+            <!-- <img src="/w3images/bandmember.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px"> -->
+            <span class="w3-large">Investing</span>
+            <br>
+            <!-- <span>Investing</span> -->
+          </li>
+          <li class="w3-padding-16">
+            <!-- <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px"> -->
+            <span class="w3-large">Making Music</span>
+            <br>
+            <!-- <span>Releasing Music</span> -->
+          </li>
+          <li class="w3-padding-16">
+            <!-- <img src="/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px"> -->
+            <span class="w3-large">Entrepreneurship</span>
+            <br>
+            <!-- <span>Entrepreneurship</span> -->
+          </li>
+          <li class="w3-padding-16">
+            <!-- <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px"> -->
+            <span class="w3-large">Soccer</span>
+            <br>
+            <!-- <span>Releasing Music</span> -->
+          </li>
+          <li class="w3-padding-16">
+            <!-- <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px"> -->
+            <span class="w3-large">Fishing</span>
+            <br>
+            <!-- <span>Releasing Music</span> -->
+          </li>
+          <li class="w3-padding-16">
+            <!-- <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px"> -->
+            <span class="w3-large">Spirituality</span>
+            <br>
+            <!-- <span>Releasing Music</span> -->
+          </li>
+        </ul>
+      </div>
+      <hr>
+
+      <!-- Contact -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-indigo">
+          <h4>Contact Me</h4>
+        </div>
+        <div class="w3-row-padding w3-white"><br>
+          Email: alvinalaphat@gmail.com<br>
+          Phone: (636) 373-0364<br><br>
+      </div>
+      </div>
+      <hr>      
+
+      
+      
+      <!-- Subscribe -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-indigo">
+          <h4>Join My Network</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <!-- <p>Enter your e-mail below and join my network!</p> -->
+          <!-- <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p> -->
+          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-green">Join</button></p>
+        </div>
+      </div>
+
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Mailing List Modal -->
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">Join My Network</h2>
+      <p>I believe the world is a good place. Join my mailing list and you'll get weekly content about everything good going on in the world! (temporarily unavailable) </p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">I'm in</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <!-- <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Back top</a> -->
+  <!-- <p>Created by Alvin Alaphat</p>
+</footer> -->
+
+<script>
+
+// carousel
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var xyz = document.getElementsByClassName("myTextSlide");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+    xyz[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  xyz[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 5000);    
+}
+
+// useless
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+</script>
+
 </body>
-
 </html>
