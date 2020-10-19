@@ -1,3 +1,3 @@
-# Vanilla JavaScript App
+# MOOV Landing Page
 
-This repo is used as a starter for a _very basic_ HTML web application using no front-end frameworks.
+Informational landing page for people to find out more about MOOV.
