@@ -70,7 +70,48 @@ body {
     </div> -->
 
     <!-- HTML FORM GOES HERE --> 
-
+    <div class="container">
+      <h1 class="brand"><span>MOOV</span> Web Design</h1>
+      <div class="wrapper">
+        <div class="company-info">
+          <h3>MOOV Web Design</h3>
+          <ul>
+            <li><i class="fa fa-road"></i> 44 Something st</li>
+            <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+            <li><i class="fa fa-envelope"></i> test@acme.test</li>
+          </ul>
+        </div>
+        <div class="contact">
+          <h3>Email Us</h3>
+          <div class="alert">Your message has been sent</div>
+          <form id="contactForm">
+            <p>
+              <label>Name</label>
+              <input type="text" name="name" id="name" required>
+            </p>
+            <p>
+              <label>Company</label>
+              <input type="text" name="company" id="company">
+            </p>
+            <p>
+              <label>Email Address</label>
+              <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+              <label>Phone Number</label>
+              <input type="text" name="phone" id="phone">
+            </p>
+            <p class="full">
+              <label>Message</label>
+              <textarea name="message" rows="5" id="message"></textarea>
+            </p>
+            <p class="full">
+              <button type="submit">Submit</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!--
     <div class="w3-display-center">
@@ -292,7 +333,67 @@ body {
   <!-- <p>Created by Alvin Alaphat</p>
 </footer> -->
 
-<!-- <script>
+<script>
+
+// web form submission
+var config = {
+  apiKey: "xxxxx",
+  authDomain: "xxxxx",
+  databaseURL: "xxxxx",
+  projectId: "xxxxx",
+  storageBucket: "xxxxx",
+  messagingSenderId: "xxxxx"
+};
+firebase.initializeApp(config);
+
+// Reference messages collection
+var messagesRef = firebase.database().ref('messages');
+
+// Listen for form submit
+document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+// Submit form
+function submitForm(e){
+  e.preventDefault();
+
+  // Get values
+  var name = getInputVal('name');
+  var company = getInputVal('company');
+  var email = getInputVal('email');
+  var phone = getInputVal('phone');
+  var message = getInputVal('message');
+
+  // Save message
+  saveMessage(name, company, email, phone, message);
+
+  // Show alert
+  document.querySelector('.alert').style.display = 'block';
+
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000);
+
+  // Clear form
+  document.getElementById('contactForm').reset();
+}
+
+// Function to get get form values
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveMessage(name, company, email, phone, message){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name,
+    company:company,
+    email:email,
+    phone:phone,
+    message:message
+  });
+}
 
 // carousel
 var myIndex = 0;
@@ -324,8 +425,8 @@ function myFunction(id) {
   }
 }
 
-</script> -->
-<script src="main.js"></script>
+</script>
+<!-- <script src="main.js"></script> -->
 
 </body>
 </html>
