@@ -402,35 +402,35 @@ function saveMessage(name, company, email, phone, message){
   });
 }
 
-// carousel
-var myIndex = 0;
-carousel();
+// CAROUSEL
+// var myIndex = 0;
+// carousel();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var xyz = document.getElementsByClassName("myTextSlide");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-    xyz[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  xyz[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2500);    
-}
+// function carousel() {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   var xyz = document.getElementsByClassName("myTextSlide");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";  
+//     xyz[i].style.display = "none";  
+//   }
+//   myIndex++;
+//   if (myIndex > x.length) {myIndex = 1}    
+//   x[myIndex-1].style.display = "block";  
+//   xyz[myIndex-1].style.display = "block";  
+//   setTimeout(carousel, 2500);    
+// }
 
-// useless
-document.getElementById("myBtn").click();
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+// // useless
+// document.getElementById("myBtn").click();
+// function myFunction(id) {
+//   var x = document.getElementById(id);
+//   if (x.className.indexOf("w3-show") == -1) {
+//     x.className += " w3-show";
+//   } else { 
+//     x.className = x.className.replace(" w3-show", "");
+//   }
+// }
 
 </script>
 <!-- <script src="main.js"></script> -->
