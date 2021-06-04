@@ -333,27 +333,33 @@ body {
   <!-- <p>Created by Alvin Alaphat</p>
 </footer> -->
 
+<script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-app.js"></script>
+
 <script>
 
 // web form submission
-var config = {
-  apiKey: "xxxxx",
-  authDomain: "xxxxx",
-  databaseURL: "xxxxx",
-  projectId: "xxxxx",
-  storageBucket: "xxxxx",
-  messagingSenderId: "xxxxx"
-};
-firebase.initializeApp(config);
+var firebaseConfig = {
+    apiKey: "AIzaSyBTSP_woS3LL0DuuhdO7rPM6AW_IW6mtS4",
+    authDomain: "moov4-4d3c4.firebaseapp.com",
+    databaseURL: "https://moov4-4d3c4.firebaseio.com",
+    projectId: "moov4-4d3c4",
+    storageBucket: "moov4-4d3c4.appspot.com",
+    messagingSenderId: "539403240889",
+    appId: "1:539403240889:web:a2fa4be7afd2b242726268",
+    measurementId: "G-SZ2VBJFFRL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 
-// Reference messages collection
-var messagesRef = firebase.database().ref('messages');
+  // Reference messages collection
+  var messagesRef = firebase.database().ref('businessPost');
 
-// Listen for form submit
-document.getElementById('contactForm').addEventListener('submit', submitForm);
+  // Listen for form submit
+  document.getElementById('contactForm').addEventListener('submit', submitForm);
 
-// Submit form
-function submitForm(e){
+  // Submit form
+  function submitForm(e){
   e.preventDefault();
 
   // Get values
