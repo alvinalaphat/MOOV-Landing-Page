@@ -394,11 +394,11 @@ function getInputVal(id){
 function saveMessage(name, company, email, phone, message){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
-    name: name,
-    company:company,
-    email:email,
-    phone:phone,
-    message:message
+    businessId: name,
+    details:company,
+    startTime:email,
+    maxOccupancy:phone,
+    cost:message
   });
 }
 
