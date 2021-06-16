@@ -49,6 +49,25 @@ body {
     font-family: "Open Sans"
 }
 
+
+              label{
+    display: inline-block;
+    font-size: 18px;
+}
+input {
+  display: inline-block;
+  /* float: left; */
+} 
+
+#aligner {
+  align-content: space-between;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 18px;
+    line-height: 3;
+}
+
 </style>
 
 <body class="w3-indigo">
@@ -72,33 +91,27 @@ body {
           <!-- <h3>Email Us</h3>
           <div class="alert">Your message has been sent</div> -->
           <form id="contactForm">
-            <p>
-              <label>Business Code: </label>
-              <input class="rounder" type="text" name="name" id="name" required>
-            </p>
-            <p>
-              <label>Details About Event: </label>
-              <input type="text" class="rounder" name="company" id="company">
-            </p>
-            <p>
-              <label>Start Time: </label>
-              <input type="datetime-local" class="rounder" name="email" id="email" required>
-            </p>
-            <p>
-              <label>Max Occupancy: </label>
-              <input type="text" name="phone" class="rounder" id="phone">
-            </p>
-            <p class="full">
-              <label>Cost per person: </label>
-              <input type="text" name="message" class="rounder" id="message">
-            </p>
-            <p class="full">
+              <label style="margin-right:250px;">Business Code</label><br>
+              <input class="rounder" type="text" name="name" placeholder="Listed in your app settings..." size="27" id="name" required>
+            <br>
+              <label style="margin-right:280px;">Event Title</label><br>
+              <input class="rounder" placeholder="$1 Margaritas...2 For 1 Burgers...Karaoke..." type="text" name="name" id="name"  size="27" required>
+            <br>
+              <label style="margin-right:260px;">Event Details</label><br>
+              <input type="text" placeholder="Only for the first 50 students!" class="rounder" name="company" size="27" id="company" required>
+            <br>
+              <label style="margin-right:280px;">Start Time</label><br>
+              <input type="datetime-local" class="rounder" name="email" id="email" size="40" required>
+              <br><br>
+              <label>--- Optional Details ---</label><br>
+              <label style="margin-right:150px;">Limit Capacity </label><br>
+              <input type="number" name="phone" placeholder="Limit number of students" class="rounder" id="phone"><br>
+              <label style="margin-right:150px;">Cost per person</label><br>
+              <input type="number" placeholder="Cost for deal or cover" name="message" class="rounder" id="message">
+            <br><br>
               <label>Allow students to purchase line skip passes? </label>
-              <input type="checkbox" name="move" id="move">
-            </p>
-            <p class="full">
+              <input type="checkbox" name="move" id="move"><br><br>
               <button class="rounder" type="submit">Post Event</button>
-            </p>
           </form>
         </div>
       </div>
