@@ -95,10 +95,10 @@ input::-webkit-input-placeholder {
               <input class="rounder" type="text" name="name" placeholder="Listed in your app settings..." size="27" id="name" required>
             <br>
               <label style="margin-right:280px;">Event Title</label><br>
-              <input class="rounder" placeholder="$1 Margaritas...2 For 1 Burgers...Karaoke..." type="text" name="title" id="title"  size="27" required>
+              <input class="rounder" placeholder="Example: $1 Margaritas...2 For 1 Burgers..." type="text" name="title" id="title"  size="27" required>
             <br>
               <label style="margin-right:260px;">Event Details</label><br>
-              <input type="text" placeholder="Only for the first 50 students!" class="rounder" name="company" size="27" id="company" required>
+              <input type="text" placeholder="Example: Only for the first 50 students!" class="rounder" name="company" size="27" id="company" required>
             <br>
               <label style="margin-right:280px;">Start Time</label><br>
               <input type="datetime-local" class="rounder" name="email" id="email" size="40" required>
@@ -356,11 +356,14 @@ var firebaseConfig = {
   function submitForm(e){
   e.preventDefault();
 
+
   // Get values
   var code = getInputVal('name');
   var title = getInputVal('title');
   var details = getInputVal('company');
   var startTime = getInputVal('email');
+  startTime = new Date(startTime.replace("T", " ")).getTime();
+  console.log(parseInt(startTime));
   var maxOccupancy = parseInt(getInputVal('phone'));
   var cost = parseInt(getInputVal('message'));
   var moovOver = getInputVal('move');
