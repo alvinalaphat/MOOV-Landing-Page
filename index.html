@@ -295,15 +295,7 @@ input::-webkit-input-placeholder {
         </div>
       </div> -->
 
-      <!-- Contact -->
-      <!-- <div class="w3-black w3-margin">
-        <div class="w3-container w3-padding w3-indigo">
-          <h4>Contact Us</h4>
-        </div>
-        <div class="w3-row-padding w3-black"><br>
-          Email: admin@whatsthemoov.com<br>
-      </div>
-      </div> -->
+      
 
 
     <!-- END About/Intro Menu -->
@@ -366,6 +358,7 @@ var firebaseConfig = {
 
   // Get values
   var code = getInputVal('name');
+  var title = getInputVal('title');
   var details = getInputVal('company');
   var startTime = getInputVal('email');
   var maxOccupancy = parseInt(getInputVal('phone'));
@@ -373,7 +366,7 @@ var firebaseConfig = {
   var moovOver = getInputVal('move');
 
   // Save message
-  saveMessage(code, details, startTime, maxOccupancy, cost);
+  saveMessage(code, details, startTime, maxOccupancy, cost, title, moovOver);
 
   // Show alert
   // document.querySelector('.alert').style.display = 'block';
@@ -393,14 +386,16 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage(name, company, email, phone, message){
+function saveMessage(name, company, email, phone, message, title, moovOver){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     businessId: name,
+    title: title,
     details:company,
     startTime:email,
     maxOccupancy:phone,
-    cost:message
+    cost:message,
+    moovOver: moovOver,
   });
 }
 
