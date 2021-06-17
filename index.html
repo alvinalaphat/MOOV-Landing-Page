@@ -364,6 +364,11 @@ var firebaseConfig = {
   var maxOccupancy = parseInt(getInputVal('phone'));
   var cost = parseInt(getInputVal('message'));
   var moovOver = getInputVal('move');
+  if (moovOver == "on") {
+    moovOver = true;
+  } else {
+    moovOver = false;
+  }
 
   // Save message
   saveMessage(code, details, startTime, maxOccupancy, cost, title, moovOver);
