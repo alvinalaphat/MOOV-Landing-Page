@@ -373,6 +373,14 @@ var firebaseConfig = {
     moovOver = false;
   }
 
+  if (!maxOccupancy){
+    maxOccupancy = null;
+  }
+
+  if (!cost){
+    cost = null;
+  }
+
   // Save message
   saveMessage(code, details, startTime, maxOccupancy, cost, title, moovOver);
 
