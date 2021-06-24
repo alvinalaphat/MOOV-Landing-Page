@@ -79,15 +79,10 @@ input::-webkit-input-placeholder {
     <div class="container">
       <h1 class="brand"><span>MOOV</span> Maker</h1>
       <div class="wrapper">
-        <!-- <div class="company-info">
-          <h3>MOOV Web Design</h3>
-          <ul>
-            <li><i class="fa fa-road"></i> 44 Something st</li>
-            <li><i class="fa fa-phone"></i> (555) 555-5555</li>
-            <li><i class="fa fa-envelope"></i> test@acme.test</li>
-          </ul>
-        </div> -->
         <div class="contact">
+          <div id="success" class="alert">
+            <strong>Your business event has been posted!</strong>
+          </div>
           <!-- <h3>Email Us</h3>
           <div class="alert">Your message has been sent</div> -->
           <form id="contactForm">
@@ -214,6 +209,14 @@ input::-webkit-input-placeholder {
         [data-custom-class='body'], [data-custom-class='body'] * {
                 background: transparent !important;
               }
+          .alert {
+            padding: 10px;
+            background-color: #4BB543;
+            color: white;
+          }
+        #success {
+	        display: none;
+        }
         .rounder {
           border-radius: 10px;
         }
@@ -320,11 +323,6 @@ input::-webkit-input-placeholder {
   </div>
 </div>
 
-<!-- Footer
-<footer class="w3-container w3-dark-grey" style="padding:32px">
-   <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Back top</a> -->
-  <!-- <p>Created by Alvin Alaphat</p>
-</footer> -->
 
 <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-database.js"></script>
@@ -384,14 +382,6 @@ var firebaseConfig = {
   // Save message
   saveMessage(code, details, startTime, maxOccupancy, cost, title, moovOver);
 
-  // Show alert
-  // document.querySelector('.alert').style.display = 'block';
-
-  // Hide alert after 3 seconds
-  // setTimeout(function(){
-  //   document.querySelector('.alert').style.display = 'none';
-  // },3000);
-
   // Clear form
   document.getElementById('contactForm').reset();
 }
@@ -413,40 +403,25 @@ function saveMessage(name, company, email, phone, message, title, moovOver){
     cost:message,
     moovOver: moovOver,
   });
+  posted();
 }
 
-// CAROUSEL
-// var myIndex = 0;
-// carousel();
+// success message
+function removeAlert() {
+	document.getElementById("success").style.display = 'none';
+}
 
-// function carousel() {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   var xyz = document.getElementsByClassName("myTextSlide");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-//     xyz[i].style.display = "none";  
-//   }
-//   myIndex++;
-//   if (myIndex > x.length) {myIndex = 1}    
-//   x[myIndex-1].style.display = "block";  
-//   xyz[myIndex-1].style.display = "block";  
-//   setTimeout(carousel, 2500);    
-// }
+function alert() {
+	document.getElementById("success").style.display = 'block';
+	setTimeout(removeAlert,10000);
+}
 
-// // useless
-// document.getElementById("myBtn").click();
-// function myFunction(id) {
-//   var x = document.getElementById(id);
-//   if (x.className.indexOf("w3-show") == -1) {
-//     x.className += " w3-show";
-//   } else { 
-//     x.className = x.className.replace(" w3-show", "");
-//   }
-// }
+function posted() {
+	setTimeout(alert, 700);
+}
+
 
 </script>
-<!-- <script src="main.js"></script> -->
 
 </body>
 </html>
