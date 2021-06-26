@@ -8,7 +8,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="./static/images/moovblue.png" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -46,13 +46,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 body {
-    font-family: "Open Sans"
+    font-family: "Montserrat";
 }
 
 
               label{
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
 }
 input {
   display: inline-block;
@@ -68,16 +68,25 @@ input::-webkit-input-placeholder {
     line-height: 3;
 }
 
+.moovblue {
+  background-color: #000080;
+}
+
+.makewhite {
+  color:white;
+}
+
 </style>
 
-<body class="w3-indigo">
+<body class="moovblue">
 
 <div class="w3-content" style="max-width:1600px">
 
-  <header class="w3-container w3-xlarge w3-center w3-indigo">
+  <header class="w3-container w3-xlarge w3-center moovblue">
     <!-- <b>What's the MOOV?</b> -->
     <div class="container">
-      <h1 class="brand"><span>MOOV</span> Maker</h1>
+      <!-- <h1 class="brand makewhite">MOOV <img style="height:50px;width:50px;" src="./static/images/moovblue.png"> Maker</h1> -->
+      <h1 class="brand makewhite">MOOV Maker</h1>
       <div class="wrapper">
         <div class="contact">
           <div id="success" class="alert">
@@ -86,25 +95,25 @@ input::-webkit-input-placeholder {
           <!-- <h3>Email Us</h3>
           <div class="alert">Your message has been sent</div> -->
           <form id="contactForm">
-              <label style="margin-right:250px;">Business Code</label><br>
-              <input class="rounder" type="text" name="name" placeholder="Listed in your app settings..." size="27" id="name" required>
+              <label style="margin-right:250px;color: white">Business Code</label><br>
+              <input class="rounder" type="text" name="name" placeholder="Listed in MOOV app settings..." size="27" id="name" required>
             <br>
-              <label style="margin-right:280px;">Event Title</label><br>
+              <label style="margin-right:280px;color: white">Event Title</label><br>
               <input class="rounder" placeholder="Example: $1 Margaritas...2 For 1 Burgers..." type="text" name="title" id="title"  size="27" required>
             <br>
-              <label style="margin-right:260px;">Event Details</label><br>
+              <label style="margin-right:260px;color: white">Event Details</label><br>
               <input type="text" placeholder="Example: Only for the first 50 students!" class="rounder" name="company" size="27" id="company" required>
             <br>
-              <label style="margin-right:280px;">Start Time</label><br>
+              <label style="margin-right:280px;color: white">Start Time</label><br>
               <input type="datetime-local" class="rounder" name="email" id="email" size="40" required>
               <br><br>
               <!-- <label>--- Optional Details ---</label><br> -->
-              <label style="margin-right:70px;">Limit Capacity (optional)</label><br>
-              <input type="number" name="phone" placeholder="Limit to x number of students" class="rounder" size="27" id="phone"><br>
-              <label style="margin-right:50px;">Cost per person (optional)</label><br>
+              <label style="margin-right:70px;color: white">Limit Capacity (optional)</label><br>
+              <input type="number" name="phone" placeholder="Number of students" class="rounder" size="27" id="phone"><br>
+              <label style="margin-right:50px;color: white">Cost per person (optional)</label><br>
               <input type="number" placeholder="For in-app payments" name="message" class="rounder" size="27" id="message">
             <br><br>
-              <label>Students can purchase line-skip passes? </label>
+              <label style="color: white">Allow MOOV Over passes? </label>
               <input type="checkbox" name="move" id="move"><br><br>
               <button style="border-radius: 10px;color: black;background-color: white;" type="submit">Post Event</button>
           </form>
