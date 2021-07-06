@@ -50,13 +50,14 @@ body {
 }
 
 
-              label{
+label{
     display: inline-block;
     font-size: 16px;
 }
 input {
   display: inline-block;
   /* float: left; */
+  
 } 
 
 #aligner {
@@ -74,6 +75,13 @@ input::-webkit-input-placeholder {
 
 .makewhite {
   color:white;
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 </style>
@@ -95,9 +103,20 @@ input::-webkit-input-placeholder {
           <!-- <h3>Email Us</h3>
           <div class="alert">Your message has been sent</div> -->
           <form id="contactForm">
-              <label style="margin-right:250px;color: white">Business Code</label><br>
-              <input class="rounder" type="text" name="name" placeholder="Listed in MOOV app settings..." size="27" id="name" required>
-            <br>
+              <label style="margin-right:250px;color: white;">Business Code</label><br>
+              <input style="width: 200px;margin-right:40px;" class="rounder" type="text" name="name" placeholder="Listed in settings..." size="27" id="name" required>
+              <label style="color: white">Is this a deal? </label>
+              <input type="checkbox" name="isDeal" id="isDeal" onclick="isDealChecked()">
+            <br><br>
+            <div class="form-inline">
+              <label style="color: white; margin-left: 415px;" id="dealCostLabel">Deal Cost</label>
+              <label style="color: white; margin-right: 415px;" id="dealLimitLabel">Deal Limit</label>
+            </div>
+            <div class="form-inline">
+              <input type="number" style="width: 100px;margin-left: 430px;" name="dealCost"  class="rounder" size="10" id="dealCost">
+              <input type="number" style="width: 100px;margin-right: 430px;" name="dealLimit" class="rounder" size="10" id="dealLimit">
+            </div>
+            <!-- <br> -->
               <label style="margin-right:280px;color: white">Event Title</label><br>
               <input class="rounder" placeholder="Example: $1 Margaritas...2 For 1 Burgers..." type="text" name="title" id="title"  size="27" required>
             <br>
@@ -108,11 +127,15 @@ input::-webkit-input-placeholder {
               <input type="datetime-local" class="rounder" name="email" id="email" size="40" required>
               <br><br>
               <!-- <label>--- Optional Details ---</label><br> -->
-              <label style="margin-right:70px;color: white">Limit Capacity (optional)</label><br>
-              <input type="number" name="phone" placeholder="Number of students" class="rounder" size="27" id="phone"><br>
-              <label style="margin-right:50px;color: white">Cost per person (optional)</label><br>
-              <input type="number" placeholder="For in-app payments" name="message" class="rounder" size="27" id="message">
-            <br><br>
+            <div class="form-inline">
+              <label style="color: white; margin-left: 450px;">Limit Capacity (optional)</label><br>
+              <label style="color: white; margin-right: 450px;">Cover Charge (optional)</label><br>
+            </div>
+            <div class="form-inline">
+              <input type="number" style="width: 100px;margin-left: 450px;" name="phone"  class="rounder" size="10" id="phone"><br>
+              <input type="number" style="width: 100px;margin-right: 450px;" name="message" class="rounder" size="10" id="message">
+            </div>
+            <br>
               <label style="color: white">Allow MOOV Over passes? </label>
               <input type="checkbox" name="move" id="move"><br><br>
               <button onclick="submitForm();" style="border-radius: 10px;color: black;background-color: white;" type="submit">Post Event</button>
@@ -226,6 +249,23 @@ input::-webkit-input-placeholder {
         #success {
 	        display: none;
         }
+
+        #dealLimit {
+	        display: none;
+        }
+
+        #dealCost {
+	        display: none;
+        }
+
+        #dealLimitLabel {
+	        display: none;
+        }
+
+        #dealCostLabel {
+	        display: none;
+        }
+
         .rounder {
           border-radius: 10px;
         }
@@ -335,8 +375,37 @@ input::-webkit-input-placeholder {
 
 <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-database.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script>
+
+// deal checkbox
+function isDealChecked() {
+  var decider = document.getElementById('isDeal');
+    if (decider.checked){
+        showDealDetails('check');
+    } else {
+        removeDealDetails('unchecked');
+    }
+}
+
+function removeDealDetails() {
+  var decider = document.getElementById('isDeal');
+  document.getElementById("dealCost").style.display = 'none';
+  document.getElementById("dealLimit").style.display = 'none';
+
+  document.getElementById("dealCostLabel").style.display = 'none';
+  document.getElementById("dealLimitLabel").style.display = 'none';
+}
+
+function showDealDetails() {
+  var decider = document.getElementById('isDeal');
+  document.getElementById("dealCost").style.display = 'block';
+  document.getElementById("dealLimit").style.display = 'block';
+  
+  document.getElementById("dealCostLabel").style.display = 'block';
+  document.getElementById("dealLimitLabel").style.display = 'block';
+}
 
 // web form submission
 var firebaseConfig = {
@@ -361,8 +430,6 @@ var firebaseConfig = {
 
   // Submit form
   function submitForm(){
-  // e.preventDefault();
-
 
   // Get values
   var code = getInputVal('name');
@@ -373,6 +440,14 @@ var firebaseConfig = {
   console.log(parseInt(startTime));
   var maxOccupancy = parseInt(getInputVal('phone'));
   var cost = parseInt(getInputVal('message'));
+  var dealLimit = parseInt(getInputVal('dealLimit'));
+  var dealCost = parseInt(getInputVal('dealCost'));
+  var isDeal = getInputVal('isDeal');
+  if (isDeal == "on") {
+    isDeal = true;
+  } else {
+    isDeal = false;
+  }
   var moovOver = getInputVal('move');
   if (moovOver == "on") {
     moovOver = true;
@@ -389,7 +464,7 @@ var firebaseConfig = {
   }
 
   // Save message
-  saveMessage(code, details, startTime, maxOccupancy, cost, title, moovOver);
+  saveMessage(code, details, startTime, maxOccupancy, cost, title, moovOver, isDeal, dealLimit, dealCost);
 
   // Clear form
   document.getElementById('contactForm').reset();
@@ -401,7 +476,7 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage(name, company, email, phone, message, title, moovOver){
+function saveMessage(name, company, email, phone, message, title, moovOver, isDeal, dealLimit, dealCost){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     businessId: name,
@@ -411,6 +486,9 @@ function saveMessage(name, company, email, phone, message, title, moovOver){
     maxOccupancy:phone,
     cost:message,
     moovOver: moovOver,
+    isDeal: isDeal,
+    dealLimit: dealLimit,
+    dealCost: dealCost,
   });
   posted();
 }
@@ -428,6 +506,8 @@ function alert() {
 function posted() {
 	setTimeout(alert, 700);
 }
+
+
 
 
 </script>
