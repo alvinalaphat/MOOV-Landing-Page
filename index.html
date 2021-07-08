@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" type="image/x-icon" href="./static/images/moovblue.png" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -77,21 +78,39 @@ input::-webkit-input-placeholder {
   color:white;
 }
 
-@media screen and (max-device-width:1600px) {
+/* @media screen and (max-device-width:1600px) {
   .form-inline {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
   }
-}
+} */
 
 
 .form-inline {
-  
   display: flex;
   /* flex-flow: row wrap; */
   align-items: center;
   justify-content: space-evenly;
+}
+
+.roundBorder {
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-left: 35vw;
+  margin-right: 35vw;
+}
+
+.roundBorder2 {
+  margin-left: 30vw;
+  margin-right: 30vw;
+}
+
+.box-title {
+    color: white;
+    font-size: 16pt;
+    display: inline-block;
+    padding: 0 2px;
 }
 
 </style>
@@ -118,14 +137,24 @@ input::-webkit-input-placeholder {
               <label style="color: white">Is this a deal? </label>
               <input type="checkbox" name="isDeal" id="isDeal" onclick="isDealChecked()">
             <br><br>
-            <div class="form-inline media">
-              <label style="color: white; margin-left: 415px;" id="dealCostLabel">Deal Cost</label>
-              <label style="color: white; margin-right: 415px;" id="dealLimitLabel">Deal Limit</label>
+            <div class="roundBorder2">
+              <div class="form-inline">
+                <label style="color: white;padding-left: 10px;" name="dealCostLabel" id="dealCostLabel">Deal Cost</label>
+                <label style="color: white;padding-left: 10px;" name="dealLimitLabel" id="dealLimitLabel">Deal Limit</label>
+              </div>
+              <div class="form-inline">
+                <input type="number" style="width: 100px;" name="dealCost"  class="rounder" size="10" id="dealCost">
+                <input type="number" style="width: 100px;" name="dealLimit" class="rounder" size="10" id="dealLimit">
+              </div>
+              </div>
+            <!-- <div class="form-inline media">
+              <label style="color: white; margin-left: 415px;padding-right: 10px;" id="dealCostLabel">Deal Cost</label>
+              <label style="color: white; margin-right: 415px;padding-left: 10px;" id="dealLimitLabel">Deal Limit</label>
             </div>
             <div class="form-inline media">
               <input type="number" style="width: 100px;margin-left: 430px;" name="dealCost"  class="rounder" size="10" id="dealCost">
               <input type="number" style="width: 100px;margin-right: 430px;" name="dealLimit" class="rounder" size="10" id="dealLimit">
-            </div>
+            </div> -->
             <!-- <br> -->
               <label style="margin-right:280px;color: white">Event Title</label><br>
               <input class="rounder" placeholder="Example: $1 Margaritas...2 For 1 Burgers..." type="text" name="title" id="title"  size="27" required>
@@ -136,18 +165,25 @@ input::-webkit-input-placeholder {
               <label style="margin-right:280px;color: white">Start Time</label><br>
               <input type="datetime-local" class="rounder" name="email" id="email" size="40" required>
               <br><br>
-              <!-- <label>--- Optional Details ---</label><br> -->
+              <div class="box-title">
+                Optional
+              </div>
+            <div class="roundBorder">
             <div class="form-inline">
-              <label style="color: white; margin-left: 450px;">Limit Capacity (optional)</label><br>
-              <label style="color: white; margin-right: 450px;">Cover Charge (optional)</label><br>
+              <label style="color: white;padding-right: 10px;">Limit Capacity</label><br>
+              <label style="color: white;padding-left: 10px;">Cover Charge</label><br>
             </div>
             <div class="form-inline">
-              <input type="number" style="width: 100px;margin-left: 450px;" name="phone"  class="rounder" size="10" id="phone"><br>
-              <input type="number" style="width: 100px;margin-right: 450px;" name="message" class="rounder" size="10" id="message">
+              <input type="number" style="width: 100px;" name="phone"  class="rounder" size="10" id="phone"><br>
+              <input type="number" style="width: 100px;" name="message" class="rounder" size="10" id="message">
             </div>
             <br>
-              <label style="color: white">Allow MOOV Over passes? </label>
-              <input type="checkbox" name="move" id="move"><br><br>
+              <input type="checkbox" name="move" id="move">
+              <label style="color: white">Allow MOOV Over Passes? </label>
+              <i class="fa fa-info-circle" style="font-size:16px;color:white;cursor: pointer;" onclick="explainPasses();"></i>
+
+            </div>
+            <br><br>
               <button onclick="submitForm();" style="border-radius: 10px;color: black;background-color: white;" type="submit">Post Event</button>
           </form>
         </div>
@@ -389,6 +425,11 @@ input::-webkit-input-placeholder {
 
 <script>
 
+// explain MOOV Over passes
+function explainPasses() {
+  alert("MOOV Over Passes allow up to 20 students to purchase a $10 pass that lets them skip to the front of the line upon arrival.")
+}
+
 // deal checkbox
 function isDealChecked() {
   var decider = document.getElementById('isDeal');
@@ -508,13 +549,13 @@ function removeAlert() {
 	document.getElementById("success").style.display = 'none';
 }
 
-function alert() {
+function alertPosted() {
 	document.getElementById("success").style.display = 'block';
 	setTimeout(removeAlert,10000);
 }
 
 function posted() {
-	setTimeout(alert, 700);
+	setTimeout(alertPosted, 700);
 }
 
 
