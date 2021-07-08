@@ -103,12 +103,10 @@ input::-webkit-input-placeholder {
   }
 }
 
-/* .roundBorder {
+.roundBorder {
   border: 2px solid white;
   border-radius: 10px;
-  margin-left: 30vw;
-  margin-right: 30vw;
-} */
+}
 
 .roundBorder2 {
   margin-left: 30vw;
@@ -500,8 +498,14 @@ var firebaseConfig = {
   console.log(parseInt(startTime));
   var maxOccupancy = parseInt(getInputVal('phone'));
   var cost = parseInt(getInputVal('message'));
-  var dealLimit = parseInt(getInputVal('dealLimit'));
-  var dealCost = parseInt(getInputVal('dealCost'));
+  var dealLimit = getInputVal('dealLimit');
+  if (dealLimit) {
+    dealLimit = parseInt(getInputVal('dealLimit'));
+  }
+  var dealCost = getInputVal('dealCost');
+  if (dealCost) {
+    dealCost = parseInt(getInputVal('dealCost'));
+  }
   var isDeal = getInputVal('isDeal');
   if (isDeal == "on") {
     isDeal = true;
