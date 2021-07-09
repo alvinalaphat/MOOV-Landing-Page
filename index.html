@@ -499,12 +499,16 @@ var firebaseConfig = {
   var maxOccupancy = parseInt(getInputVal('phone'));
   var cost = parseInt(getInputVal('message'));
   var dealLimit = getInputVal('dealLimit');
-  if (dealLimit) {
+  if (dealLimit != "") {
     dealLimit = parseInt(getInputVal('dealLimit'));
+  } else {
+    dealLimit = 0;
   }
   var dealCost = getInputVal('dealCost');
-  if (dealCost) {
+  if (dealCost != "") {
     dealCost = parseInt(getInputVal('dealCost'));
+  } else {
+    dealCost = 0;
   }
   var isDeal = getInputVal('isDeal');
   if (isDeal == "on") {
