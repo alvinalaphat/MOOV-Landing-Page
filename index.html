@@ -484,7 +484,7 @@ var firebaseConfig = {
   var messagesRef = firebase.database().ref('businessPost');
 
   // Listen for form submit
-  document.getElementById('contactForm').addEventListener('submit', submitForm);
+  // document.getElementById('contactForm').addEventListener('submit', submitForm);
 
   // Submit form
   function submitForm(){
@@ -567,8 +567,14 @@ function alertPosted() {
 	setTimeout(removeAlert,10000);
 }
 
+function deletePosted() {
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set(null);
+}
+
 function posted() {
 	setTimeout(alertPosted, 700);
+  setTimeout(deletePosted, 6000);
 }
 
 
