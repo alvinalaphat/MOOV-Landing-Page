@@ -78,15 +78,6 @@ input::-webkit-input-placeholder {
   color:white;
 }
 
-/* @media screen and (max-device-width:1600px) {
-  .form-inline {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-} */
-
-
 .form-inline {
   display: flex;
   /* flex-flow: row wrap; */
@@ -120,16 +111,26 @@ input::-webkit-input-placeholder {
     padding: 0 2px;
 }
 
+#mom {
+    display: table;
+}
+.baby {
+    display: table-cell;
+}  
+
 </style>
 
 <body class="moovblue">
 
 <div class="w3-content" style="max-width:1600px">
-
+    <div id="mom">
+    <h1 class="brand makewhite baby" style="padding-left: 3vw; font-size: 35px;">MOOV&nbsp;<img style="height:35px;width:35px;padding-bottom: 5px;" src="./static/images/moovblue.png"></h1>
+    <h1 class="brand makewhite baby" style="padding-left: 65vw; font-size: 20px;"><a style="text-decoration:none" href="./business.html">Business Post&nbsp;</a></h1>
+    <h1 class="brand makewhite baby" style="padding-left: 3vw; font-size: 20px;"><a style="text-decoration:none" href="./privacy.html">Privacy Policy&nbsp;</a></h1>
+</div>
   <header class="w3-container w3-xlarge w3-center moovblue">
     <!-- <b>What's the MOOV?</b> -->
     <div class="container">
-      <h1 class="brand makewhite">MOOV <img style="height:45px;width:45px;" src="./static/images/moovblue.png"> Maker</h1>
       <!-- <h1 class="brand makewhite">MOOV Maker</h1> -->
       <div class="wrapper">
         <div class="contact">
@@ -138,78 +139,14 @@ input::-webkit-input-placeholder {
           </div>
           <!-- <h3>Email Us</h3>
           <div class="alert">Your message has been sent</div> -->
-          <form id="contactForm">
-              <label style="margin-right:250px;color: white;">Business Code</label><br>
-              <input style="width: 200px;margin-right:40px;" class="rounder" type="text" name="name" placeholder="Listed in settings..." size="27" id="name" required>
-              <label style="color: white">Is this a deal? </label>
-              <input type="checkbox" name="isDeal" id="isDeal" onclick="isDealChecked()">
-            <br><br>
-            <div class="roundBorder2">
-              <div class="form-inline">
-                <label style="color: white;padding-left: 10px;" name="dealCostLabel" id="dealCostLabel">Deal Cost</label>
-                <label style="color: white;padding-left: 10px;" name="dealLimitLabel" id="dealLimitLabel">Deal Limit</label>
-              </div>
-              <div class="form-inline">
-                <input type="number" style="width: 100px;" name="dealCost"  class="rounder" size="10" id="dealCost">
-                <input type="number" style="width: 100px;" name="dealLimit" class="rounder" size="10" id="dealLimit">
-              </div>
-              </div>
-            <!-- <div class="form-inline media">
-              <label style="color: white; margin-left: 415px;padding-right: 10px;" id="dealCostLabel">Deal Cost</label>
-              <label style="color: white; margin-right: 415px;padding-left: 10px;" id="dealLimitLabel">Deal Limit</label>
-            </div>
-            <div class="form-inline media">
-              <input type="number" style="width: 100px;margin-left: 430px;" name="dealCost"  class="rounder" size="10" id="dealCost">
-              <input type="number" style="width: 100px;margin-right: 430px;" name="dealLimit" class="rounder" size="10" id="dealLimit">
-            </div> -->
-            <!-- <br> -->
-              <label style="margin-right:280px;color: white">Event Title</label><br>
-              <input class="rounder" placeholder="Example: $1 Margaritas...2 For 1 Burgers..." type="text" name="title" id="title"  size="27" required>
-            <br>
-              <label style="margin-right:260px;color: white">Event Details</label><br>
-              <input type="text" placeholder="Example: Only for the first 50 students!" class="rounder" name="company" size="27" id="company" required>
-            <br>
-              <label style="margin-right:280px;color: white">Start Time</label><br>
-              <input type="datetime-local" class="rounder" name="email" id="email" size="40" required>
-              <br><br>
-              <div class="box-title">
-                Optional
-              </div>
-            <div class="roundBorder">
-            <div class="form-inline">
-              <label style="color: white;padding-left: 10px;padding-right: 10px;">Limit Capacity</label><br>
-              <label style="color: white;padding-left: 10px;padding-right: 10px;">Cover Charge</label><br>
-            </div>
-            <div class="form-inline">
-              <input type="number" style="width: 100px;" name="phone"  class="rounder" size="10" id="phone"><br>
-              <input type="number" style="width: 100px;" name="message" class="rounder" size="10" id="message">
-            </div>
-            <br>
-              <input type="checkbox" name="move" id="move">
-              <label style="color: white">Allow MOOV Over Passes? </label>
-              <i class="fa fa-info-circle" style="font-size:16px;color:white;cursor: pointer;" onclick="explainPasses();"></i>
+          <img src="static/images/home.png" style="height: 700px; width: 425px;">
 
-            </div>
-            <br><br>
-              <button onclick="submitForm();" style="border-radius: 10px;color: black;background-color: white;" type="submit">Post Event</button>
-          </form>
+
         </div>
       </div>
     </div>
     <!-- <b>Coming soon...</b> -->
   </header>
-
-  <!-- Image header --> 
-  <!-- <header class="w3-display-container w3-wide" id="home"> -->
-    <!-- <div style="width:fit-content; height:fit-content" >
-        <img class="w3-image mySlides w3-animate-opacity" src="./static/images/num1.png" alt="friends" >
-        <img class="w3-image mySlides w3-animate-opacity" src="./static/images/num2.png" alt="fam" >
-        <img class="w3-image mySlides w3-animate-opacity" src="./static/images/num3.png" alt="stl" >
-        <img class="w3-image mySlides w3-animate-opacity" src="./static/images/num4.png" alt="traveler">
-    </div> -->
-
-    <!-- HTML FORM GOES HERE --> 
-    
 
     <!--
     <div class="w3-display-center">
@@ -431,158 +368,6 @@ input::-webkit-input-placeholder {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script>
-
-// explain MOOV Over passes
-function explainPasses() {
-  alert("MOOV Over Passes allow up to 20 students to purchase a $10 pass that lets them skip to the front of the line upon arrival.")
-}
-
-// deal checkbox
-function isDealChecked() {
-  var decider = document.getElementById('isDeal');
-    if (decider.checked){
-        showDealDetails('check');
-    } else {
-        removeDealDetails('unchecked');
-    }
-}
-
-function removeDealDetails() {
-  var decider = document.getElementById('isDeal');
-  document.getElementById("dealCost").style.display = 'none';
-  document.getElementById("dealLimit").style.display = 'none';
-
-  document.getElementById("dealCostLabel").style.display = 'none';
-  document.getElementById("dealLimitLabel").style.display = 'none';
-}
-
-function showDealDetails() {
-  var decider = document.getElementById('isDeal');
-  document.getElementById("dealCost").style.display = 'block';
-  document.getElementById("dealLimit").style.display = 'block';
-  
-  document.getElementById("dealCostLabel").style.display = 'block';
-  document.getElementById("dealLimitLabel").style.display = 'block';
-}
-
-// web form submission
-var firebaseConfig = {
-    apiKey: "AIzaSyBTSP_woS3LL0DuuhdO7rPM6AW_IW6mtS4",
-    authDomain: "moov4-4d3c4.firebaseapp.com",
-    databaseURL: "https://moov4-4d3c4.firebaseio.com",
-    projectId: "moov4-4d3c4",
-    storageBucket: "moov4-4d3c4.appspot.com",
-    messagingSenderId: "539403240889",
-    appId: "1:539403240889:web:a2fa4be7afd2b242726268",
-    measurementId: "G-SZ2VBJFFRL"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  // firebase.analytics();
-
-  // Reference messages collection
-  var messagesRef = firebase.database().ref('businessPost');
-
-  // Listen for form submit
-  // document.getElementById('contactForm').addEventListener('submit', submitForm);
-
-  // Submit form
-  function submitForm(){
-
-  // Get values
-  var code = getInputVal('name');
-  var title = getInputVal('title');
-  var details = getInputVal('company');
-  var startTime = getInputVal('email');
-  startTime = new Date(startTime.replace("T", " ")).getTime();
-  console.log(parseInt(startTime));
-  var maxOccupancy = parseInt(getInputVal('phone'));
-  var cost = parseInt(getInputVal('message'));
-  var dealLimit = getInputVal('dealLimit');
-  if (dealLimit != "") {
-    dealLimit = parseInt(getInputVal('dealLimit'));
-  } else {
-    dealLimit = 0;
-  }
-  var dealCost = getInputVal('dealCost');
-  if (dealCost != "") {
-    dealCost = parseInt(getInputVal('dealCost'));
-  } else {
-    dealCost = 0;
-  }
-  var isDeal = getInputVal('isDeal');
-  if (isDeal == "on") {
-    isDeal = true;
-  } else {
-    isDeal = false;
-  }
-  var moovOver = getInputVal('move');
-  if (moovOver == "on") {
-    moovOver = true;
-  } else {
-    moovOver = false;
-  }
-
-  if (!maxOccupancy){
-    maxOccupancy = 8000000;
-  }
-
-  if (!cost){
-    cost = 0;
-  }
-
-  // Save message
-  saveMessage(code, details, startTime, maxOccupancy, cost, title, moovOver, isDeal, dealLimit, dealCost);
-
-  // Clear form
-  document.getElementById('contactForm').reset();
-}
-
-// Function to get get form values
-function getInputVal(id){
-  return document.getElementById(id).value;
-}
-
-// Save message to firebase
-function saveMessage(name, company, email, phone, message, title, moovOver, isDeal, dealLimit, dealCost){
-  var newMessageRef = messagesRef.push();
-  newMessageRef.set({
-    businessId: name,
-    title: title,
-    details:company,
-    startTime:email,
-    maxOccupancy:phone,
-    cost:message,
-    moovOver: moovOver,
-    isDeal: isDeal,
-    dealLimit: dealLimit,
-    dealCost: dealCost,
-  });
-  posted();
-}
-
-// success message
-function removeAlert() {
-	document.getElementById("success").style.display = 'none';
-}
-
-function alertPosted() {
-	document.getElementById("success").style.display = 'block';
-	setTimeout(removeAlert,10000);
-}
-
-function deletePosted() {
-  var newMessageRef = messagesRef.push();
-  newMessageRef.remove();
-}
-
-function posted() {
-	setTimeout(alertPosted, 700);
-  console.log("deleting now!");
-  setTimeout(deletePosted, 6000);
-}
-
-
 
 
 </script>
