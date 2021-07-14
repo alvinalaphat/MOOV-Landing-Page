@@ -17,5 +17,6 @@ echo "Hello World!";
 ?> />
 <meta property="og:image" content="/static/images/home.png" />
 
+	<body>test</body>
 
 </html>
