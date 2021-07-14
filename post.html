@@ -12,13 +12,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-<meta property="og:title" content="Moov"/>
+<meta property="og:title" content="Moov" id="previewId"/>
 <meta property="og:image" content="/static/images/home.png" />
 	
 	<body>
 
   <script>
-      document.body.innerHTML = "<h1>Testing something </h1>"
+	previewId.content = "test json";
+      document.body.innerHTML = "<h1>Testing something </h1>";
   </script>
 	</body>
 
