@@ -1,7 +1,5 @@
 {
   "mimeTypes": {
-    "." : "application/json", 
-    ".html" : "application/json", 
-    ".json" : "application/json",
+    "apple-app-site-association" : "application/json", 
   }
 }
