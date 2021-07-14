@@ -1,5 +1,8 @@
 {
+  "globalHeaders": {
+    "content-Type": "application/json",
+  },
   "mimeTypes": {
-    * : "application/json" 
+    ".html": "application/html"
   }
 }
