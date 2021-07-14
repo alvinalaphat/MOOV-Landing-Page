@@ -1,6 +1,5 @@
 {
   "mimeTypes": {
-    "*" : "application/json", 
-    ".*" : "application/json",
+    "association" : "application/json" 
   }
 }
