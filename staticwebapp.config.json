@@ -1,10 +1,15 @@
 {
    "routes": [
-    {
+      {
       "route": "/apple*",
       "headers": {
         "content-type": "application/json"
       },
-    },
+      {
+      "route": "/post*",
+       "headers" :{
+         "content-type" : "text/php"
+        },
+      },
     ],
 }
