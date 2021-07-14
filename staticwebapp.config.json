@@ -6,11 +6,5 @@
             "content-type": "application/json"
          },
       },
-      {
-      "route": "/post*",
-       "headers" :{
-         "content-type" : "text/html"
-        },
-      },
     ],
 }
