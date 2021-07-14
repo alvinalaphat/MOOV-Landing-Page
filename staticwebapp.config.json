@@ -1,6 +1,6 @@
 {
   "globalHeaders": {
-    "content-type": "application/json;",
+    "Content-Type": "application/json",
   },
   "mimeTypes": {
     ".html": "application/html"
