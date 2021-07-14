@@ -2,8 +2,9 @@
    "routes": [
       {
       "route": "/apple*",
-      "headers": {
-        "content-type": "application/json"
+         "headers": {
+            "content-type": "application/json"
+         },
       },
       {
       "route": "/post*",
