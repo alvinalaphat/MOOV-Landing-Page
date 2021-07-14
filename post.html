@@ -12,9 +12,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-<meta property="og:title" content=<?php
-echo "Hello World!";
-?> />
+<meta property="og:title" content=<script type="text/javascript">
+var first = getUrlVars()["year"];
+var second = getUrlVars()["Month"];
+
+alert(first);
+alert(second);
+function getUrlVars() {
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value;
+});
+return vars;
+}
+</script>/>
 <meta property="og:image" content="/static/images/home.png" />
 
 	<body>test</body>
