@@ -6,10 +6,4 @@
         "content-type": "application/json"
       },},
     ],
-  "globalHeaders": {
-    "Content-Type": "application/json",
-  },
-  "mimeTypes": {
-    ".html": "application/html"
-  }
 }
