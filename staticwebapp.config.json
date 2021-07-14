@@ -1,4 +1,11 @@
 {
+   "routes": [
+    {
+      "route": "/apple-app-site-association",
+      "headers": {
+        "content-type": "application/json"
+      }
+    ],
   "globalHeaders": {
     "Content-Type": "application/json",
   },
