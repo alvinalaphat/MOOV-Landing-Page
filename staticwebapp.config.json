@@ -1,0 +1,10 @@
+{
+   "routes": [
+      {
+      "route": "/apple*",
+         "headers": {
+            "content-type": "application/json"
+         },
+      },
+    ],
+}
