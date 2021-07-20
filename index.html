@@ -30,26 +30,9 @@
   
   
   
- <meta property="og:title" id="metaTitle"/>
- <meta property="og:image" id="metaImage"/>
-  
-   <script>
-    const queryString = window.location.href;
-    const urlParams = new URLSearchParams(queryString);
-    const uid = urlParams.get('postUrl')
-    const pid = urlParams.get('postTitle')
-    if (uid != null && pid != null){
-      document.getElementById('metaTitle').content = postTitle;
-      document.getElementById('metaImage').content = postUrl;
-    }
-    else{
-      document.getElementById('metaTitle').content = "Moov";
-      document.getElementById('metaImage').content = "/assets/lib/assets/appicon.png";
-    }
-      
-</script>
-
-  <title>moov</title>
+ <meta property="og:title" id="metaTitle" content="MOOV"/>
+ <meta property="og:image" id="metaImage" = ""/assets/lib/assets/appicon.png""/>
+    <title>moov</title>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
