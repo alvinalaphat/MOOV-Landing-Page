@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html>
+  
+  <script>
+    const queryString = window.location.href;
+    const urlParams = new URLSearchParams(queryString);
+    const uid = urlParams.get('postUrl')
+    const pid = urlParams.get('postTitle')
+    if (uid != null && pid != null){
+      document.getElementById('metaTitle').content = postTitle;
+      document.getElementById('metaImage').content = postUrl;
+    }
+    else{
+      document.getElementById('metaTitle').content = "Moov";
+      document.getElementById('metaImage').content = "/assets/lib/assets/appicon.png";
+    }
+      
+</script>
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -25,8 +41,8 @@
 
   <meta name="google-signin-client_id" content="787054162198-vrr2rd5r5jj92i39hjo88lr2gqiqpcu0.apps.googleusercontent.com">
   
- <meta property="og:title" content="Moov" />
- <meta property="og:image" content="/assets/lib/assets/appicon.png"/>
+ <meta property="og:title" id="metaTitle"/>
+ <meta property="og:image" id="metaImage"/>
 
   <title>moov</title>
   <link rel="manifest" href="manifest.json">
