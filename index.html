@@ -45,6 +45,69 @@
     color: #0f64c5;
 }
 
+[data-custom-class='body'], [data-custom-class='body'] * {
+                background: transparent !important;
+              }
+          .alert {
+            padding: 10px;
+            background-color: #4BB543;
+            color: white;
+          }
+        #success {
+	        display: none;
+        }
+
+        #dealLimit {
+	        display: none;
+        }
+
+        #dealCost {
+	        display: none;
+        }
+
+        #dealLimitLabel {
+	        display: none;
+        }
+
+        #dealCostLabel {
+	        display: none;
+        }
+
+        .rounder {
+          border-radius: 10px;
+        }
+      [data-custom-class='title'], [data-custom-class='title'] * {
+                font-family: Arial !important;
+      font-size: 26px !important;
+      color: #000000 !important;
+              }
+      [data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
+                font-family: Arial !important;
+      color: #595959 !important;
+      font-size: 14px !important;
+              }
+      [data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
+                font-family: Arial !important;
+      font-size: 19px !important;
+      color: #000000 !important;
+              }
+      [data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
+                font-family: Arial !important;
+      font-size: 17px !important;
+      color: #000000 !important;
+              }
+      [data-custom-class='body_text'], [data-custom-class='body_text'] * {
+                color: #595959 !important;
+      font-size: 14px !important;
+      font-family: Arial !important;
+              }
+      [data-custom-class='link'], [data-custom-class='link'] * {
+                color: #3030F1 !important;
+      font-size: 14px !important;
+      font-family: Arial !important;
+      word-break: break-word !important;
+              }
+
 h1,h2,h3,h4,h5,h6 {
     font-family: "Oswald"
     /* padding: -30px; */
@@ -137,7 +200,7 @@ input::-webkit-input-placeholder {
     <div id="mom">
     <h1 class="brand makewhite baby" style="padding-left: 3vw; font-size: 35px;">&nbsp;<img style="height:45px;width:45px;margin-top: 10px;" src="./static/images/moovblue.png"></h1>
     <h1 class="brand makewhite baby" style="padding-left: 65vw; font-size: 20px;"><a style="text-decoration:none" href="./business.html">Business Post&nbsp;</a></h1>
-    <h1 class="brand makewhite baby" style="padding-left: 3vw; font-size: 20px;"><a style="text-decoration:none" href="./privacy.html">Privacy Policy&nbsp;</a></h1>
+    <h1 class="brand makewhite baby" style="padding-left: 3vw; font-size: 20px;"><a style="text-decoration:none" href="./app.html">Login&nbsp;</a></h1>
 </div>
 
 
@@ -221,76 +284,7 @@ input::-webkit-input-placeholder {
 
       </div>  -->
 
-      <style>
-        [data-custom-class='body'], [data-custom-class='body'] * {
-                background: transparent !important;
-              }
-          .alert {
-            padding: 10px;
-            background-color: #4BB543;
-            color: white;
-          }
-        #success {
-	        display: none;
-        }
-
-        #dealLimit {
-	        display: none;
-        }
-
-        #dealCost {
-	        display: none;
-        }
-
-        #dealLimitLabel {
-	        display: none;
-        }
-
-        #dealCostLabel {
-	        display: none;
-        }
-
-        .rounder {
-          border-radius: 10px;
-        }
-      [data-custom-class='title'], [data-custom-class='title'] * {
-                font-family: Arial !important;
-      font-size: 26px !important;
-      color: #000000 !important;
-              }
-      [data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
-                font-family: Arial !important;
-      color: #595959 !important;
-      font-size: 14px !important;
-              }
-      [data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
-                font-family: Arial !important;
-      font-size: 19px !important;
-      color: #000000 !important;
-              }
-      [data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
-                font-family: Arial !important;
-      font-size: 17px !important;
-      color: #000000 !important;
-              }
-      [data-custom-class='body_text'], [data-custom-class='body_text'] * {
-                color: #595959 !important;
-      font-size: 14px !important;
-      font-family: Arial !important;
-              }
-      [data-custom-class='link'], [data-custom-class='link'] * {
-                color: #3030F1 !important;
-      font-size: 14px !important;
-      font-family: Arial !important;
-      word-break: break-word !important;
-              }
-      </style>
       
-            <div data-custom-class="body">
-            
-      
-    <!-- END ENTRIES -->
-    </div>
 
     <!-- About/Information menu -->
     <!-- <div class="w3-col l4"> -->
@@ -342,6 +336,9 @@ input::-webkit-input-placeholder {
 
 <!-- END w3-content -->
 </div>
+<footer class="makewhite" style="margin-left: 1vw; margin-top:10vw; font-size: 10px;">
+  <a href="./privacy.html">Privacy Policy</a>
+</footer>
 
 <!-- Mailing List Modal -->
 <div id="subscribe" class="w3-modal w3-animate-opacity">
