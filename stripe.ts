@@ -8,8 +8,8 @@ import express from 'express';
 import Stripe from 'stripe';
 import { generateResponse } from './utils';
 
-const stripePublishableKey = process.env.STRIPE_PUBLISHABLE_KEY || '';
-const stripeSecretKey = process.env.STRIPE_SECRET_KEY || '';
+const stripePublishableKey = 'pk_live_51JCmo6HVtzPRZQSmRGgvkvUXK44CVh3cJK5JXI87G6jxlDEiqjonAEqUv7C6ss3b3La3h2Dor9SXzg0vSijdQ3qc00z3EaR57K';
+const stripeSecretKey ='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';
 const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET || '';
 
 const app = express();
