@@ -5,6 +5,10 @@
          "headers": {
             "content-type": "application/json"
          },
+         "route": "/stripe*",
+         "headers": {
+            "content-type": "text/javascript"
+         },
       },
     ],
 }
