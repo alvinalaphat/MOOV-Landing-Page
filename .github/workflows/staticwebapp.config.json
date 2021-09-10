@@ -7,7 +7,6 @@
     "" : "application/json",
 
     ".json": "application/json",
-    ".ts" : "text/javascript"
 
   }
 
