@@ -1,14 +1,7 @@
-{
-   "routes": [
-      {
-      "route": "/apple*",
-         "headers": {
-            "content-type": "application/json"
-         },
-         "route": "/stripe*",
-         "headers": {
-            "content-type": "text/javascript"
-         },
-      },
-    ],
+{{
+  "mimeTypes": {
+    "*" : "application/json",
+    "." : "application/json", 
+    "" : "application/json",
+  }
 }
