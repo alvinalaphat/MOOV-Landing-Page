@@ -1,4 +1,4 @@
-{{
+{
   "mimeTypes": {
     "*" : "application/json",
     "." : "application/json", 
