@@ -1,366 +1,437 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>MOOV</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Description">
+    <meta name="author" content="Author">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="./static/images/moovmodern.png" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.buttflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.buttflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
+    <!-- Webpage Title -->
+    <title>MOOV</title>
 
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
 
-<style>
+	<!-- Favicon  -->
+    <link rel="icon" href="images/Logo.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
 
-.fa-github {
-    color:purple;
-}
-.fa-facebook-official {
-   color:#3b5998;
-}
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
 
-.fa-instagram {
-    color:#e23578;
-}
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Kobe</a> -->
 
-.fa-twitter {
-    color:#00aced;
-}
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/logoLong.png" alt="alternative"></a>
 
-.fa-soundbutt {
-    color:orange;
-}
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-.fa-spotify {
-    color:green;
-}
-
-.fa-linkedin {
-    color: #0f64c5;
-}
-
-[data-custom-class='body'], [data-custom-class='body'] * {
-                background: transparent !important;
-              }
-          .alert {
-            padding: 10px;
-            background-color: #4BB543;
-            color: white;
-          }
-        #success {
-	        display: none;
-        }
-
-        #dealLimit {
-	        display: none;
-        }
-
-        #dealCost {
-	        display: none;
-        }
-
-        #dealLimitLabel {
-	        display: none;
-        }
-
-        #dealCostLabel {
-	        display: none;
-        }
-
-        .rounder {
-          border-radius: 10px;
-        }
-      [data-custom-class='title'], [data-custom-class='title'] * {
-                font-family: Arial !important;
-      font-size: 26px !important;
-      color: #000000 !important;
-              }
-      [data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
-                font-family: Arial !important;
-      color: #595959 !important;
-      font-size: 14px !important;
-              }
-      [data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
-                font-family: Arial !important;
-      font-size: 19px !important;
-      color: #000000 !important;
-              }
-      [data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
-                font-family: Arial !important;
-      font-size: 17px !important;
-      color: #000000 !important;
-              }
-      [data-custom-class='body_text'], [data-custom-class='body_text'] * {
-                color: #595959 !important;
-      font-size: 14px !important;
-      font-family: Arial !important;
-              }
-      [data-custom-class='link'], [data-custom-class='link'] * {
-                color: #3030F1 !important;
-      font-size: 14px !important;
-      font-family: Arial !important;
-      word-break: break-word !important;
-              }
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: "Oswald"
-    /* padding: -30px; */
-}
-
-body {
-    font-family: "Montserrat";
-}
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="article.html">Participating Schools<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="terms.html">Our Mission</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="privacy.html">Privacy</a>
+                    </li>
+                    <!-- Commented out dropdown capabilities
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item page-scroll" href="article.html">Article Details</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
+                        </div>
+                    </li>
+                  -->
+                </ul>
+                <span class="nav-item">
+                    <a class="btn-outline-sm" href="contact.html">Contact</a>
+                </span>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
 
 
-label{
-    display: inline-block;
-    font-size: 16px;
-}
-input {
-  display: inline-block;
-  /* float: left; */
-  
-} 
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid1" src="images/iphoneBlank.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of div -->
+                <div class="col-lg-6">
 
-#aligner {
-  align-content: space-between;
-}
+                    <div class="text-container">
+                        <h1 class="h1-large">
+                          Want to know what the MOOV is on your college campus?</h1>
+                        <p class="p-large">
+                          Find the who, what, where, and when at an expanding network of colleges and universities!</p>
+                        <!-- Insert download buttons for the app here-->
+                        <a href="https://apps.apple.com/us/app/moov-notre-dame/id1547343625">
+                          <img alt="Appstore Redirect"
+                          src="images/appStore.png"
+                          width="175" height="50"></img>
+                        </a>
 
-input::-webkit-input-placeholder {
-    font-size: 18px;
-    line-height: 3;
-}
-
-.moovblue {
-  background-color: #022B5B;
-}
-
-.makewhite {
-  color:white;
-}
-
-.form-inline {
-  display: flex;
-  /* flex-flow: row wrap; */
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-@media (min-width: 900px) {
-  .roundBorder {
-    border: 2px solid white;
-    border-radius: 10px;
-    margin-left: 35vw;
-    margin-right: 35vw;
-  }
-}
-
-.roundBorder {
-  border: 2px solid white;
-  border-radius: 10px;
-}
-
-.roundBorder2 {
-  margin-left: 30vw;
-  margin-right: 30vw;
-}
-
-.box-title {
-    color: white;
-    font-size: 16pt;
-    display: inline-block;
-    padding: 0 2px;
-}
-
-#mom {
-    display: table;
-}
-.baby {
-    display: table-cell;
-}  
-
-.center-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-
-</style>
-
-<body class="moovblue">
-
-<div class="w3-content" style="max-width:1600px">
-    <div id="mom">
-    <h1 class="brand makewhite baby" style="padding-left: 3vw; font-size: 35px;">&nbsp;<img style="height:45px;width:45px;margin-top: 10px;" src="./static/images/moovmodern.png"></h1>
-    <!-- <h1 class="brand makewhite baby" style="padding-left: 65vw; font-size: 20px;"><a style="text-decoration:none" href="./business.html">Business Post&nbsp;</a></h1>
-    <h1 class="brand makewhite baby" style="padding-left: 3vw; font-size: 20px;"><a style="text-decoration:none" href="./app.html">Login&nbsp;</a></h1> -->
-</div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+        <svg class="frame-decoration" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 192.275"><defs><style>.cls-1{fill:#f3f6f9;}</style></defs><title>frame-decoration</title><path class="cls-1" d="M0,158.755s63.9,52.163,179.472,50.736c121.494-1.5,185.839-49.738,305.984-49.733,109.21,0,181.491,51.733,300.537,50.233,123.941-1.562,225.214-50.126,390.43-50.374,123.821-.185,353.982,58.374,458.976,56.373,217.907-4.153,284.6-57.236,284.6-57.236V351.03H0V158.755Z" transform="translate(0 -158.755)"/></svg>
+    </header> <!-- end of header -->
+    <!-- end of header -->
 
 
+    <!-- Takeaways -->
+    <div class="basic-1 bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
 
-  <header class="w3-container w3-xlarge w3-center moovblue">
-    <div class="container">
-          
-          <img class="center-image" src="static/images/placeholder.png" style="width: 50%; height: auto; margin-top: 50px;">
-        
-          <!-- <div class="makewhite baby" style="padding-right: 200px;">
-            <strong><h3 style="margin-left: 44vw;">Users Joined: 67</h3></strong>
-          </div> -->
+                    <!-- Takeaway -->
+                    <div class="takeaway-wrapper">
+                        <div class="takeaway-container">
+                            <div class="takeaway-icon bg-gold">
+                                <i class="fas fa-glass-cheers"></i>
+                            </div> <!-- end of takeaway-icon -->
+                            <div class="takeaway-text">
+                                <h5>Find what the MOOV is</h5>
+                                Using the app will allow you to see events posted for your school!
+                            </div> <!-- end of takeaway-text -->
+                        </div> <!-- end of takeaway-container -->
+                    </div> <!-- end of takeaway-wrapper -->
+                    <!-- end of takeaway -->
 
-    </div>
-  </header>
+                    <!-- Takeaway -->
+                    <div class="takeaway-wrapper">
+                        <div class="takeaway-container">
+                            <div class="takeaway-icon bg-dark-gray">
+                                <span class="fas fa-users"></span>
+                            </div> <!-- end of takeaway-icon -->
+                            <div class="takeaway-text">
+                                <h5>See who's going where</h5>
+                                You'll also find out who's going where with our RSVP function! (You can choose anonymity, though)
+                            </div> <!-- end of takeaway-text -->
+                        </div> <!-- end of takeaway-container -->
+                    </div> <!-- end of takeaway-wrapper -->
+                    <!-- end of takeaway -->
 
-  </header>
+                    <!-- Takeaway -->
+                    <div class="takeaway-wrapper">
+                        <div class="takeaway-container">
+                            <div class="takeaway-icon bg-navy">
+                                <span class="fas fa-city"></span>
+                            </div> <!-- end of takeaway-icon -->
+                            <div class="takeaway-text">
+                                <h5>Support Local Businesses</h5>
+                                See which local business partners are offering deals to students!
+                            </div> <!-- end of takeaway-text -->
+                        </div> <!-- end of takeaway-container -->
+                    </div> <!-- end of takeaway-wrapper -->
+                    <!-- end of takeaway -->
 
-  <!-- MILESTONES Grid -->
-  <!-- <div class="w3-row w3-pale-blue w3-padding w3-border">
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of takeaways -->
 
-    <div class="w3-col l8 s12">
-    <h1 class="w3-xxlarge w3-center"><b>MILESTONES</b></h1>
-        <div class="w3-container w3-sand w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h3>Minimally Viable Product</h3>
-          <h5><span class="w3-opacity">August 2020</span></h5>
+
+    <!-- Description -->
+    <div class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h2>Promote Social Good</h2>
+                        <p>
+                          MOOV is dedicated to making giving our
+                          users the option to donate to charities
+                          of their chosing.
+                        </p>
+                        <!--
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>How to pick the subject</strong> based on your passions and expertise</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>Choosing the platform</strong> for creating and hosting your blog</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>How to monetize your blog</strong> after it has a lot of loyal readers</div>
+                            </li>
+                        </ul>
+                      -->
+                    <!--
+                        <a class="btn-solid-reg popup-with-move-anim" href="#description-lightbox">Lightbox</a>
+                    -->
+                    </div> <!-- end of text-container -->
+
+                </div> <!-- end of col -->
+                <!--
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/description.png" alt="alternative">
+                    </div>
+                </div>
+              -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of description -->
+
+    <!-- Statement -->
+    <div class="basic-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container bg-gray">
+                        <h2>Support Local Businesses</h2>
+                        <p>This app will allow you to view which Businesses are hosting events as well as when they are having deals for students!</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Blurb1</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Blurb2</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Blurb2</div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-3 -->
+    <!-- end of statement -->
+
+
+<!--
+    <div class="slider-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="slider-container">
+                        <div class="swiper-container card-slider">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-1.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Who would have thought that Kobe can provide such amazing results in just a few weeks after reading the ebook</p>
+                                            <p class="testimonial-author">Jude Thorn - Designer</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-2.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">I just finished my trial period and was so amazed with the support and results that I just downloaded Kobe</p>
+                                            <p class="testimonial-author">Roy Smith - Developer</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-3.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Found the eBook on an online courses platform and jumped right in. After 1 week I started to see the results</p>
+                                            <p class="testimonial-author">Marsha Singer - Marketer</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-4.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">So excited about my new online blog which I launched with the help of Kobe. Awesome guide on how things work</p>
+                                            <p class="testimonial-author">Tim Shaw - Designer</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-5.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">This is an outstanding ebook about how to create your own blog. It takes you through all necessary steps</p>
+                                            <p class="testimonial-author">Lindsay Spice - Marketer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/testimonial-6.jpg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">After a few months of course hunting without any breakthrough I stumbled upon this course and I love it </p>
+                                            <p class="testimonial-author">Ann Blake - Developer</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-
-        <div class="w3-justify">
-          <p>At this stage, we have just completed a bare prototype of the app and have launched it onto our phones. The current working version allows users to post events and find ones that others have posted on the app using Google's Firebase DB and its Flutter engine for mobile devices. We hope to pitch to investors soon. </p>
-          <p class="w3-clear"></p>
-        </div>
-      </div>
-
-      <div class="w3-container w3-sand w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h3>Pitching to Investors</h3>
-          <h5><span class="w3-opacity">September 2020</span></h5>
-        </div>
-
-        <div class="w3-justify">
-          <p>We pitched to an early investor with inside relations and successfully gathered strong interest. We received an $800,000 valuation and an initial seed investment of $20,000 for 2.5% equity. Furthermore, the Wilson Sonsini Goodrich & Rosati law firm in Palo Alto has 
-            offered to sign us as an LLC with deferred payment until revenue is realized. With this initial investment, we plan to focus on user testing, development, and marketing. 
-          </p>
-          <p class="w3-clear"></p>
-        </div>
-      </div>
-
-      <div class="w3-container w3-sand w3-margin w3-padding-large">
-
-        <div class="w3-center">
-          <h3>Pre-Accelerator Success</h3>
-          <h5><span class="w3-opacity">October 2020</span></h5>
-        </div>
-
-        <div class="w3-justify">
-          <p>We managed to get into the University of Notre Dame's Pre-Accelerator program for early startups with traction. This gives us access to over $100k in resources and $1000 of funding. This 6 week program should put
-            us in front of many more investors, from angel investors to venture capitalists. The startup coaches will speed us through the user testing and marketing process to ensure we have strong guidance as we prepare to launch
-            with the end of COVID. 
-          </p>
-          <p class="w3-clear"></p>
-        </div>
-
-      </div>
-
-      <div class="w3-container w3-sand w3-margin w3-padding-large">
-
-        <div class="w3-center">
-          <h3>Demo Day</h3>
-          <h5><span class="w3-opacity">November 2020</span></h5>
-        </div> 
-
-        <div class="w3-justify">
-          <p>On Demo Day, we will be pitching to multiple potential investors with data proving our user traction and interest in our fully working product. Despite investments,
-            the connections we make on Demo Day will propel us onto our next step for the MOOV product. Our next goal is to engage with local businesses and recruit college ambassadors
-            in each of the dorms on campus to prepare for launch day in the spring. 
-          </p>
-          <p class="w3-clear"></p>
-        </div>
-
-      </div>  -->
-
-      
-
-    <!-- About/Information menu -->
-    <!-- <div class="w3-col l4"> -->
-      <!-- Mission -->
-      <!-- <div class="w3-black w3-margin">
-        <div class="w3-container w3-indigo">
-          <h4>Our Mission</h4>
-          <p>"We strive to use technology as a means of bringing college students together face-to-face. We hope to democratize the fun on college campuses across the country. In a world dominated by virtual interactions, we hope to pull people out of
-            their comfort zones and explore what's out there. We want to make it easier to bring people together regardless of their background. 
-            Let's be the first wave in changing the way people make their MOOV. Let's streamline the move making process and elevate it
-            onto a social scale in a way that's never been done before.  Let's start a MOOVment."
-          </p>
-        </div>
-      </div> --> 
-
-      <!-- About Card -->
-      <!-- <div class="w3-black w3-margin">
-        <img src="./static/images/alvin.png" alt="Alvin" style="width:100%">
-        <img src="./static/images/kfc.png" alt="Alvin" style="width:100%">
-        <div class="w3-container w3-indigo">
-          <h4>Meet the Founders</h4>
-          <p>Alvin Alaphat is a sophomore at the University of Notre Dame and is studying computer science with a minor in engineering corporate practice and real estate. In his free time, he plays soccer and makes music in his hometown of St. Louis. 
-            <br><br>Kevin Camson is a junior at the University of Notre Dame and is studying business analytics in the Mendoza College of Business. In his free time, Kevin rows for Notre Dame and is an ROTC member from Long Island.
-          </p>
-        </div>
-      </div> -->
-
-      <!-- Social Media -->
-      <!-- <div class="w3-black w3-margin">
-        <div class="w3-container w3-padding w3-indigo">
-          <h4>Follow Our Progress to the Top</h4>
-        </div>
-        <div class="w3-container w3-large w3-padding w3-center">
-            <i></i>
-            <a href="https://www.instagram.com/whatsthemoov/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
-            <a href="https://twitter.com/whatsthemoov" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/alvin-a-6b38b0159/" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
-        </div>
-      </div> -->
-
-      
-
-
-    <!-- END About/Intro Menu -->
     </div>
 
-  <!-- END GRID -->
-  </div>
+-->
 
-<!-- END w3-content -->
-</div>
-<footer class="makewhite" style="margin-left: 1vw; margin-top:10vw; font-size: 10px;">
-  <a href="./privacy.html">Privacy Policy</a>
-</footer>
+    <!-- Download -->
+    <div class="form-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="image-container">
+                        <img class="img-fluid2" src="images/appstorePhone.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7">
+                    <div class="text-container">
+                        <h2>Download the MOOV app today!</h2>
 
-<!-- Mailing List Modal -->
-<div id="subscribe" class="w3-modal w3-animate-opacity">
-  <div class="w3-modal-content" style="padding:32px">
-    <div class="w3-container w3-white">
-      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
-      <h2 class="w3-wide">Get Early Access</h2>
-      <p>MOOV plans to launch in 2021 as soon as the effects of the coronavirus subside. Enter your email to be among the first to pre-download! </p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">I'm in</button>
-    </div>
-  </div>
-</div>
-
-
-<script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-database.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<script>
+                        <a href="https://apps.apple.com/us/app/moov-notre-dame/id1547343625">
+                          <img alt="Appstore Redirect"
+                          src="images/appStore.png"
+                          width="175" height="50"></img>
+                        </a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-1 -->
+    <!-- end of download -->
 
 
-</script>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>MOOV is an app created by students for students. For support, you can contact <a href="mailto:kevin@whatsthemoov.com">kevin@whatsthemoov.com</a></h4>
+                    <div class="social-container">
+                        <!--
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                      -->
+                      <!--
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                      -->
+                        <!--
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                      -->
+                        <span class="fa-stack">
+                            <a href="http://www.instagram.com/whatsthemoov/">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <!--
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </span>
+                      -->
+                    </div> <!-- end of social-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
 
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="list-unstyled li-space-lg p-small">
+                        <li><a href="participating_schools.html">Participating Schools</a></li>
+                        <li><a href="our_mission.html">Our Mission</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <p class="p-small statement">Copyright © <a href="index.html">MOOV</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
 </body>
 </html>
