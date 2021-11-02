@@ -867,6 +867,15 @@ input[type='checkbox'] {
 	text-align: center;
 }
 
+
+.form-participating-schools{
+	padding-top: 8.25rem;
+	padding-bottom: 7.25rem;
+	background-size: cover;
+	text-align: center;
+}
+
+
 .form-1 .image-container {
 	margin-bottom: 3rem;
 }
