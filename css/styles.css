@@ -419,6 +419,16 @@ input[type='checkbox'] {
   height: 430px;
 }
 
+.centerMaker {
+  text-align: center;
+}
+
+.img-fluid3 {
+  width: 400px;
+  margin: 15px;
+  text-align: center;
+}
+
 .navbar .logo-text {
 	color: #ffffff;
 	font-weight: 700;
