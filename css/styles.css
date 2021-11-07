@@ -425,10 +425,29 @@ input[type='checkbox'] {
   text-align: center;
 }
 
-.img-fluid3 {
+.schoolImage {
   width: 400px;
   margin: 15px;
   text-align: center;
+}
+
+.schoolLocation {
+  color: white;
+  font-style: italic;
+}
+
+.partnerList {
+  color: black;
+}
+
+.partnerImage {
+  width: 250px;
+  margin: 25px;
+  text-align: center;
+}
+
+.schoolDesc {
+  color: black;
 }
 
 .navbar .logo-text {
