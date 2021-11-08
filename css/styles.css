@@ -448,6 +448,7 @@ input[type='checkbox'] {
 
 .schoolDesc {
   color: black;
+  margin: 10px;
 }
 
 .navbar .logo-text {
