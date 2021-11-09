@@ -19,18 +19,6 @@ Table Of Contents:
 - Extra Pages
 - Media Queries
 ******************************************/
-
-/*****************************************
-Colors:
-- Backgrounds, navbar - black #2b3041
-- Backgrounds - light gray #f3f6f9
-- Navbar links, icons - light blue #10bcee
-- Buttons - purple #c167ef
-- Headings text, buttons - black #30363a
-- Body text - dark gray #585f63
-******************************************/
-
-
 /**************************/
 /*     General Styles     */
 /**************************/
@@ -450,6 +438,8 @@ input[type='checkbox'] {
   color: black;
   margin: 25px;
 }
+
+
 
 .navbar .logo-text {
 	color: #ffffff;
